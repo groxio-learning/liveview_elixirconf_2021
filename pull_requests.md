@@ -4,3 +4,4 @@
 - Matthew Erhard
 - Pat Collins
 - Kevin Marth
+- Bennie Rosas
