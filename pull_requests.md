@@ -1,3 +1,3 @@
-Bruce Tate
-Nick Castrop
-Solomon White
+- Bruce Tate
+- Nick Castrop
+- Solomon White
