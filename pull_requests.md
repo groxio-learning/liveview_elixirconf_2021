@@ -1,4 +1,5 @@
 - Bruce Tate
 - Nick Castrop
 - Solomon White
+- Matthew Erhard
 - Pat Collins
