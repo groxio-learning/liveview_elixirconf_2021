@@ -1,0 +1,22 @@
+<h2><%= @title %></h2>
+
+<%= f = form_for @changeset, "#",
+  id: "passage-form",
+  phx_target: @myself,
+  phx_change: "validate",
+  phx_submit: "save" %>
+
+  <%= label f, :slug %>
+  <%= text_input f, :slug %>
+  <%= error_tag f, :slug %>
+
+  <%= label f, :phrase %>
+  <%= textarea f, :phrase %>
+  <%= error_tag f, :phrase %>
+
+  <%= label f, :steps %>
+  <%= number_input f, :steps %>
+  <%= error_tag f, :steps %>
+
+  <%= submit "Save", phx_disable_with: "Saving..." %>
+</form>
