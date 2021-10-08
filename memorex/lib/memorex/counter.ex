@@ -2,12 +2,16 @@ defmodule Memorex.Counter do
   @moduledoc """
   """
 
-  def new do
-    %{count: 0}
+  def new(max) do
+    %{count: 0, max: max}
   end
 
-  def add(%{count: count}, increment) do
-    %{count: count + increment}
+  def increment(%{count: max, max: max}) do
+    new(max)
+  end
+
+  def increment(%{count: count}) do
+    %{count: count + 1}
   end
 
   def as_string(%{count: count}) do
