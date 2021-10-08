@@ -27,7 +27,6 @@ defmodule MemorexWeb.Router do
 
     live "/passages/:id", PassageLive.Show, :show
     live "/passages/:id/show/edit", PassageLive.Show, :edit
-
   end
 
   # Other scopes may use custom stacks.
