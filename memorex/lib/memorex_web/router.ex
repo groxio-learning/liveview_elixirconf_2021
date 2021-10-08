@@ -19,6 +19,7 @@ defmodule MemorexWeb.Router do
 
     live "/", PageLive, :index
     live "/pick", PickLive
+    live "/game", GameLive
   end
 
   # Other scopes may use custom stacks.
