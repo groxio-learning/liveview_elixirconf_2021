@@ -18,6 +18,7 @@ defmodule MemorexWeb.Router do
     pipe_through :browser
 
     live "/", PageLive, :index
+    live "/pick", PickLive
   end
 
   # Other scopes may use custom stacks.
