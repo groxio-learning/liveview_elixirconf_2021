@@ -1,4 +1,6 @@
 defmodule Memorex.Eraser do
+  defstruct ~w[plan phrase]a
+
   def new(phrase, cycles \\ 3) when is_binary(phrase) do
     string_length = String.length(phrase)
 
@@ -9,10 +11,10 @@ defmodule Memorex.Eraser do
       |> Enum.shuffle()
       |> Enum.chunk_every(chunk_size)
 
-    %{plan: plan, phrase: String.graphemes(phrase)}
+    %__MODULE__{plan: plan, phrase: String.graphemes(phrase)}
   end
 
-  def erase(%{plan: [current_plan | plan], phrase: phrase} = eraser) do
+  def erase(%{plan: [current_plan | plan], phrase: phrase}) do
     phrase =
       Enum.reduce(current_plan, phrase, fn index, phrase ->
         char = Enum.at(phrase, index)
@@ -27,12 +29,12 @@ defmodule Memorex.Eraser do
         List.replace_at(phrase, index, replace_char)
       end)
 
-    %{plan: plan, phrase: phrase}
+    %__MODULE__{plan: plan, phrase: phrase}
   end
 
   def erase(eraser), do: eraser
 
-  def as_string(%{phrase: phrase} = eraser) do
+  def as_string(%{phrase: phrase}) do
     Enum.join(phrase)
   end
 end
