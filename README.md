@@ -108,7 +108,7 @@ otp_v2> git remote add upstream https://github.com/groxio-learning/liveview_elix
 
 ```
 - Bruce Tate
-- Your Name Here Jr.
+- Taun
 ```
 
 - Commit the file and push
