@@ -18,7 +18,7 @@ defmodule Memorex.Eraser do
         char = Enum.at(phrase, index)
 
         replace_char =
-          if String.match?(char, ~r/[a-z]/i) do
+          if String.match?(char, ~r/\w/i) do
             "_"
           else
             char
