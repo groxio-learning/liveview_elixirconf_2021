@@ -4,8 +4,9 @@ defmodule MemorexWeb.GameLive do
   alias Memorex.Eraser
 
   @impl true
-  def mount(_params, _session, socket) do
-    {:ok, socket |> restart()}
+  def mount(%{"slug" => slug} = _params, _session, socket) do
+    passage = Memorex.Library.get_passage_by_slug!(slug)
+    {:ok, assign(socket, eraser: Eraser.new(passage.phrase, passage.steps))}
   end
 
   def render(assigns) do
